@@ -137,7 +137,7 @@ var next = function(){
 
 //function to show the winning screen, hiding non-required classes
 function winning (){
-  
+  $("#myImage").attr("src",all[i].img1);
   $(".text-timer").hide();
   $(".timer").hide();
   $(".question").hide();
@@ -146,7 +146,7 @@ function winning (){
   $(".result2").text(all[i].answer);
   $(".result1").show();
   $(".result2").show();
-  $("#myImage").attr("src",all[i].img1);
+  
   $("#myImage").show();
   i++;
   a++;
@@ -155,7 +155,7 @@ function winning (){
   
 //function to show the loosing screen, hiding non-required classes
 function loosing(){
- 
+  $("#myImage").attr("src",all[i].img2);
   $(".text-timer").hide();
   $(".timer").hide();
   $(".answers").hide();
@@ -164,7 +164,6 @@ function loosing(){
   $(".result2").text(all[i].answer);
   $(".result1").show();
   $(".result2").show();
-  $("#myImage").attr("src",all[i].img2);
   $("#myImage").show();
   i++;
   b++;
@@ -175,6 +174,7 @@ function loosing(){
 function myTimeout(){
   
   console.log("we are in timeout function");
+  $("#myImage").attr("src",timeup);
   $(".text-timer").hide();
   $(".timer").hide();
   $(".answers").hide();
@@ -183,7 +183,6 @@ function myTimeout(){
   $(".result2").text(all[i].answer);
   $(".result1").show();
   $(".result2").show();
-  $("#myImage").attr("src",timeup);
   $("#myImage").show();
   i++;
   c++;
