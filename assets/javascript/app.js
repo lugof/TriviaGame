@@ -100,7 +100,7 @@ var timer = function(){
     $(".timer").text(time);
     time--;
     
-    if(time<=14){                 //condition, in case time is up we need to go to (myTimeout) function
+    if(time<=-2){                 //condition, in case time is up we need to go to (myTimeout) function
       clearInterval(myInterval);
       time=24;
       $(".timer").text(time);
@@ -181,7 +181,7 @@ function myTimeout(){
   c++;
 }
 
-//function to show the results screen once the game is over
+//function to show the results screen once the game is over and reset our variables
 function gameOver(){
   clearInterval(myInterval);
   time=20;
@@ -256,8 +256,8 @@ function gameOver(){
   })
 
 
-    //agregar y modificar el readme bien hecho
-    //agregar boton a portfolio
+    
+    
     //stylish my css in awesome manner
     //agregar preguntas
 

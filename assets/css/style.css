@@ -1,4 +1,12 @@
-.btn{
-    margin-left: 452px;
+.answers:hover{
+background-color: lightsteelblue;
+border-color: lightseagreen;
 
+}
+
+.jumbotron{
+    background: linen;
+    border-style: groove;
+    border-width: medium;
+    border-color: firebrick;
 }
