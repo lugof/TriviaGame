@@ -221,6 +221,7 @@ function gameOver(){
       $(".timer").empty();
       $(".btn").hide();
       $(".result1").hide();
+      $(".result2").hide();
       newRandom();
       printQuestion();
       printAnswers();
