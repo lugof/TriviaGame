@@ -114,13 +114,15 @@ var timer = function(){
 
 //function to skip to next question screen
 var next = function(){
-  if(i>=6){
+  if(i>=7){
     gameOver();
     
   }
   else{
-    $("#myImage").toggle();
-    i++;
+    
+    $("#myImage").hide();
+ 
+    
     $(".result1").hide();
     $(".result2").hide();
     newRandom();
@@ -135,6 +137,7 @@ var next = function(){
 
 //function to show the winning screen, hiding non-required classes
 function winning (){
+  
   $(".text-timer").hide();
   $(".timer").hide();
   $(".question").hide();
@@ -145,12 +148,14 @@ function winning (){
   $(".result2").show();
   $("#myImage").attr("src",all[i].img1);
   $("#myImage").show();
+  i++;
   a++;
 
 }
   
 //function to show the loosing screen, hiding non-required classes
 function loosing(){
+ 
   $(".text-timer").hide();
   $(".timer").hide();
   $(".answers").hide();
@@ -161,12 +166,14 @@ function loosing(){
   $(".result2").show();
   $("#myImage").attr("src",all[i].img2);
   $("#myImage").show();
+  i++;
   b++;
 
 }
 
 //function to show the time-is-up screen
 function myTimeout(){
+  
   console.log("we are in timeout function");
   $(".text-timer").hide();
   $(".timer").hide();
@@ -178,6 +185,7 @@ function myTimeout(){
   $(".result2").show();
   $("#myImage").attr("src",timeup);
   $("#myImage").show();
+  i++;
   c++;
 }
 
@@ -191,11 +199,11 @@ function gameOver(){
   $(".timer").show();
   $("#myImage").hide();
   $(".answers").empty();
-  $(".question").text("Unanswered: "+c);
-  $(".question").show();
+  $(".result2").text("Unanswered: "+c);
+  $(".result2").show();
   $(".result1").text("All right let's check how you did: ");
   $(".result1").show();
-  $(".result2").hide();
+  $(".question").hide();
   $(".btn").show()
   $(".btn").text("Startover?")
   $(".answers").hide();
@@ -219,6 +227,7 @@ function gameOver(){
       clearInterval(myInterval);
       myInterval= setInterval(timer,1000);
       console.log("on btn click w: "+w);
+    
 
     })
 
